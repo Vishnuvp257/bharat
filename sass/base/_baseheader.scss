@@ -1,0 +1,12 @@
+.header {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2;
+
+  @include responsive(tab-port) {
+    padding: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+  }
+}

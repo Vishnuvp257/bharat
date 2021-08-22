@@ -1,0 +1,50 @@
+//MEDIA BREAK POINTS//
+@mixin responsive($device) {
+    @if $device == slimMob {
+      @media (max-width: 26.87em) {
+        @content;
+      }
+    }
+  
+    @if $device == phone {
+      @media (max-width: 37.5em) {
+        @content;
+      }
+    }
+  
+    @if $device == tab-port {
+      @media (max-width: 56.25em) {
+        @content;
+      }
+    }
+  
+    @if $device == tab-lan {
+      @media (max-width: 75em) {
+        @content;
+      }
+    }
+  
+    @if $device == big-screen {
+      @media (min-width: 112.5em) {
+        @content;
+      }
+    }
+  
+    @if $device == big-screen-xl {
+      @media (min-width: 131.25em) {
+        @content;
+      }
+    }
+  }
+  
+  @mixin transform(){
+    &:hover {
+      transform: translateY(-0.25rem);
+      box-shadow: 0 3px 95px rgba(0, 0, 0, 0.418);
+    }
+  
+    &:active {
+      transform: translateY(-0.1rem);
+      box-shadow: 0 3px 20px rgba(0, 0, 0, 0.836);
+    }
+  }

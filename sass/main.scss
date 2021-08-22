@@ -1,0 +1,89 @@
+@import "abstract/mixins";
+@import "abstract/variables";
+
+@import "base/baseheader";
+@import "base/basesection";
+@import "base/basefooter";
+@import "base/utillities";
+
+@import "components/animation";
+@import "components/buttons";
+@import "components/typography";
+@import "components/navigation";
+
+@import "layouts/header";
+@import "layouts/section";
+@import "layouts/footer";
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include responsive(tab-lan) {
+    font-size: 60%;
+  }
+
+  @include responsive(tab-port) {
+    font-size: 55%;
+  }
+
+  @include responsive(phone) {
+    font-size: 55%;
+  }
+
+  @include responsive(slimMob) {
+    font-size: 45%;
+  }
+
+  @include responsive(big-screen) {
+    font-size: 80%;
+  }
+
+  @include responsive(big-screen-xl) {
+    font-size: 130%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+}
+
+
+.hidden {
+  display: none;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?bi6ops');
+  src:  url('../fonts/icomoon.eot?bi6ops#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?bi6ops') format('truetype'),
+    url('../fonts/icomoon.woff?bi6ops') format('woff'),
+    url('../fonts/icomoon.svg?bi6ops#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  -webkit-speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

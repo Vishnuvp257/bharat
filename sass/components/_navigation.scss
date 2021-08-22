@@ -1,0 +1,128 @@
+//HEADER NAVIGATION
+.nav {
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+  background-color: $color-primary;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include responsive(tab-port) {
+    height: 8rem;
+    width: 100%;
+    position: fixed;
+    backface-visibility: hidden;
+    padding: 3rem;
+    z-index: 1000;
+  }
+  &_logo {
+    color: white;
+    text-align: center;
+    margin-left: 2rem;
+    align-self: center;
+  }
+
+  &_lists {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 45%;
+    justify-content: space-evenly;
+
+    @include responsive(tab-port) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-row-gap: 5rem;
+      justify-items: flex-start;
+      align-content: flex-start;
+      height: 100vh;
+      width: 60%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: 20rem;
+      background-color: $color-primary;
+      transform: translateX(-1000rem);
+      transition: all 0.2s ease-in-out;
+      z-index: 1000;
+    }
+
+    @include responsive(phone) {
+      width: 75%;
+    }
+  }
+
+  &_item {
+    font-size: 1.6rem;
+    list-style: none;
+    font-family: "Poppins-Light 300 italic", sans-serif;
+    font-weight: 500;
+    align-self: center;
+    padding: 1.5rem 0;
+    position: relative;
+
+    @include responsive(tab-port) {
+      font-size: 2.5rem;
+      justify-self: center;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      background-color: black;
+      left: 0;
+      bottom: -1px;
+      transition: 0.5s ease;
+    }
+
+    &:hover:after {
+      width: 100%;
+      height: 0.3rem;
+    }
+  }
+
+  &_link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+  }
+}
+
+.nav--active {
+  transform: translateX(0);
+}
+
+//
+.sticky {
+  position: fixed;
+  z-index: 1000;
+  opacity: 0.7;
+}
+
+//SECTION NAVIGATION
+
+.container_nav {
+  .sec-nav {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 45%;
+    width: 100%;
+    justify-content: space-evenly;
+    transform: translate(0);
+
+    &_link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bolder;
+      color: $color-white;
+      font-size: 1.6rem;
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.section {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding-top: 5rem;
+  transition: all 0.3s ease;
+
+  &_container {
+    height: 100%;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.section-2 {
+  padding: 20rem 0 10rem 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transition: all .3s ease;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(10rem);
+}

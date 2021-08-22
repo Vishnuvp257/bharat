@@ -1,0 +1,33 @@
+@keyframes typewriter {
+  to {
+    left: 100%;
+    //width: 0;
+  }
+}
+
+@keyframes popIn {
+  to {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateZ(0deg) translateX(0);
+  }
+}
+
+@keyframes opacity {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(50rem);
+  }
+}

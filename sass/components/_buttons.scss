@@ -1,0 +1,79 @@
+.btn,
+.btn:active,
+.btn:visited {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.btn {
+  width: 35%;
+  padding: 1.5rem;
+  border-radius: 3rem;
+  margin-top: 5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: 15.5rem;
+}
+
+//TOGGLE BUTTON
+.toggle-btn {
+  width: 4rem;
+  height: 4rem;
+  align-self: center;
+  margin-right: 2rem;
+  display: none;
+
+  @include responsive(tab-port) {
+    display: block;
+    z-index: 50;
+  }
+}
+
+.nav_closebtn {
+  display: none;
+  @include responsive(tab-port) {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+  }
+}
+
+//HEADER SLIDER BTN
+.slide__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.25rem;
+  transform: translate(-50%, -50%) scaleY(2);
+  cursor: pointer;
+
+  &--left {
+    left: 6%;
+  }
+
+  &--right {
+    right: 6%;
+  }
+
+  @include responsive(phone) {
+    &--right {
+      right: -1%;
+    }
+  }
+}
+
+//footer-btn
+.footer-btn{
+  @include transform();
+  margin: 0;
+}
