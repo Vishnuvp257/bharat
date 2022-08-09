@@ -121,15 +121,15 @@ const changeSlide = function () {
     if (currentSlide == maxSlides - 1) currentSlide = 0;
     else currentSlide++;
 
-    console.log("rightbtn");
+   
   } else {
     // prev slide
     if (currentSlide == 0) currentSlide = maxSlides - 1;
     else currentSlide--;
 
-    console.log("leftbtn");
+   
   }
-  console.log(currentSlide);
+  
   goToslide(currentSlide);
   activeSlide(currentSlide);
 };
